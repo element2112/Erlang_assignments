@@ -1,6 +1,7 @@
 -module(barrier).
 -export([start/1, loop/2]).
 
+% Worked on with Daniel Lam
 
 start(Processes) ->
     spawn(?MODULE, loop, [Processes, []]).
@@ -8,17 +9,16 @@ start(Processes) ->
 loop(Processes, Lst) ->
     receive
         {Pid, done} ->
-            Spid = self(),
-            Pid ! {Spid, ok}
+            Pid ! {self(), ok},
             if
-                Processes =:= 0 ->
-                    {Spid, continue}
-                true ->
-                    loop((Processes - 1), (Pid ++ Lst)),
+                Processes =:= 1 ->
+                    [L ! {self(), continue} || L <- (Lst ++ [Pid])],
+                    loop(0, []);
+                true -> loop((Processes - 1), (Lst ++ [Pid]))
+            end;
         {Pid, how_many_running} ->
             Running = Processes,
-            Spid = self(),
-            Pid ! {Spid, number_running_is, Running}
+            Pid ! {self(), number_running_is, Running},
             loop(Processes, Lst)
     end.
 
