@@ -1,0 +1,22 @@
+Eshell V10.0  (abort with ^G)
+1> {ok,count_matching_tests}
+2> count_matching.erl:11: Warning: variable 'P' is unused
+
+Testing count_matching_tests $Revision: 1.4 $...
+1
+      == 1
+0
+      == 0
+0
+      == 0
+6
+      == 6
+2
+      == 2
+3
+      == 3
+4
+      == 4
+Finished with 0 failures!
+0
+3> 

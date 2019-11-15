@@ -1,0 +1,23 @@
+Eshell V10.0  (abort with ^G)
+1> {ok,concat_tests}
+2> 
+Testing concat_tests $Revision: 1.4 $...
+[]
+      == []
+[]
+      == []
+[fee,fie,fo,fum]
+      == [fee,fie,fo,fum]
+[hmm,okay]
+      == [hmm,okay]
+[keep,ancient,lands,your,storied,pomp,cries,she]
+      == [keep,ancient,lands,your,storied,pomp,cries,she]
+[four,score,nd,seven,years,ago,our,ancestors,brought,forth,on,this,continent,
+ a,new,nation]
+      == [four,score,nd,seven,years,ago,our,ancestors,brought,forth,on,this,continent,
+ a,new,nation]
+[[more],[nested],[than],[before]]
+      == [[more],[nested],[than],[before]]
+Finished with 0 failures!
+0
+3> 

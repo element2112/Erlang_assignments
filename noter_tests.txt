@@ -1,0 +1,24 @@
+Eshell V10.0  (abort with ^G)
+1> {ok,noter}
+2> {ok,noter_tests}
+3> 
+Testing noter_tests $Revision: 1.1 $...
+[]
+      == []
+[]
+      == []
+[starting,middle,ending]
+      == [starting,middle,ending]
+[start,between,last]
+      == [start,between,last]
+[starting,middle,ending,final]
+      == [starting,middle,ending,final]
+[starting,middle,ending,final,really]
+      == [starting,middle,ending,final,really]
+[start,between,last,ultimate]
+      == [start,between,last,ultimate]
+[starting,middle,ending,final,really]
+      == [starting,middle,ending,final,really]
+Finished with 0 failures!
+0
+4> 

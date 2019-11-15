@@ -1,0 +1,24 @@
+Eshell V10.0  (abort with ^G)
+1> {ok,substaddr}
+2> {ok,substaddr_tests}
+3> 
+Testing substaddr_tests $Revision: 1.5 $...
+{group,"StartUP!",[]}
+      == {group,"StartUP!",[]}
+{store,"110 Main St.","\n 7"}
+      == {store,"110 Main St.","\n 7"}
+{group,"Target",[{store,"The Mall","\n 7"}]}
+      == {group,"Target",[{store,"The Mall","\n 7"}]}
+{group,"Target",
+       [{store,"253 Sears Tower","\n 7"},{store,"Downtown",[4,0,2,0]}]}
+      == {group,"Target",
+       [{store,"253 Sears Tower","\n 7"},{store,"Downtown",[4,0,2,0]}]}
+{group,"ACME",
+       [{group,"Robucks",[{store,"High St.","c"},{store,"Maple St."," "}]},
+        {group,"Target",[{store,"High St.","\n7"},{store,"Downtown",[4]}]}]}
+      == {group,"ACME",
+       [{group,"Robucks",[{store,"High St.","c"},{store,"Maple St."," "}]},
+        {group,"Target",[{store,"High St.","\n7"},{store,"Downtown",[4]}]}]}
+Finished with 0 failures!
+0
+4> 
